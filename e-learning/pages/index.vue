@@ -1,115 +1,65 @@
 <template>
-<v-row > 
-  <v-card
-    class="mx-auto"
-    max-width="344"
-    style="margin:10px"
-  >
-    <v-img
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-      height="200px"
-    ></v-img>
-
-    <v-card-title>
-      Top western road trips
-    </v-card-title>
-
-    <v-card-subtitle>
-      1,000 miles of wonder
-    </v-card-subtitle>
-
-    <v-card-actions>
-      <v-btn
-        color="orange lighten-2"
-        text
-      >
-        Explore
-      </v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        icon
-        @click="show = !show"
-      >
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-        </v-card-text>
-      </div>
-    </v-expand-transition>
-  </v-card>
-
-
-
-
-
-    <v-card
-    class="mx-auto"
-    max-width="344"
-    style="margin:10px"
-  >
-    <v-img
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-      height="200px"
-    ></v-img>
-
-    <v-card-title>
-      Top western road trips
-    </v-card-title>
-
-    <v-card-subtitle>
-      1,000 miles of wonder
-    </v-card-subtitle>
-
-    <v-card-actions>
-      <v-btn
-        color="orange lighten-2"
-        text
-      >
-        Explore
-      </v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        icon
-        @click="show = !show"
-      >
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-        </v-card-text>
-      </div>
-    </v-expand-transition>
-  </v-card>
-
-   
-
+  <div class="grid">
+   <div class="content-box ml-5">
+   <h1>ยินดีต้อนรับสู่เว็บ e-learning</h1>
+   <p>ตัวเลือกหลักสูตรที่มากที่สุดในโลก</p>
   
-</v-row>
-  
-
-  
+   </div>
+  </div>
 </template>
 <script>
-  export default {
-    data: () => ({
-      show: false,
-    }),
-  }
+export default {
+  data: () => ({
+    show: false
+  }),
+  layout: 'firstPage'
+};
 </script>
+
+<style scoped>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background: url('~assets/introduce.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  height:100vh;
+  background-position: center;
+ 
+}
+.content-box{
+  background-color:#fff;
+  width:35%;
+  text-align: center;
+  border-radius:2px;
+  
+  
+  
+}
+.content-box > h1{
+  margin-top:15px;
+}
+.search-data{
+  width: 80%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  
+  background: none;
+}
+@media only screen and (max-width: 600px) {
+  .grid {
+    height:60vh;
+    background: rgb(255, 0, 128);
+  }
+  .content-box{
+    margin:auto;
+    width:80%;
+  }
+}
+</style>

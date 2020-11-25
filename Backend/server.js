@@ -1,8 +1,10 @@
-const express = require('express')
+import express from 'express';
+import data from './data.js';
 const app = express()
 
+
 app.get('/', (req, res) => {
-  res.send('Hello World')
+  res.send(data.courses);
 })
 const port = 5000;
 app.listen(5000, () => {

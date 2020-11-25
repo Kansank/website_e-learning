@@ -1,34 +1,27 @@
 <template>
-  <div>
+  <v-app>
     <Sidebar></Sidebar>
     <Topbar></Topbar>
-    <v-content>
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
-    </v-content>
-        
-      
-    <Footer></Footer>
+    </v-main>
 
-  </div>
-    
-  
+    <Footer></Footer>
+  </v-app>
 </template>
 
 <script>
-import Sidebar from '@/components/Global/Sidebar'
-import Topbar from '@/components/Global/Topbar'
-import Footer from '@/components/Global/Footer'
-
-
+import Sidebar from "@/components/Global/Sidebar";
+import Topbar from "@/components/Global/Topbar";
+import Footer from "@/components/Global/Footer";
 
 export default {
-  
   components: {
     Sidebar,
     Topbar,
     Footer
   }
-}
+};
 </script>

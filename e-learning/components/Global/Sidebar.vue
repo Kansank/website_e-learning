@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-navigation-drawer v-model="drawer" fixed app >
+  <v-navigation-drawer v-model="drawer" fixed app>
     <v-list>
       <v-list-item
         v-for="(item, i) in items"
@@ -25,29 +25,46 @@ export default {
     return {
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          icon: "mdi-apps",
+          title: "หน้าหลัก",
+          to: "/"
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: "mdi-chart-bubble",
+          title: "คอร์ส",
+          to: "/courses"
+        },
+        {
+          icon: "mdi-chart-bubble",
+          title: "สอนบน e-learning",
+          to: "/teaching"
+        },
+        {
+          icon: "mdi-chart-bubble",
+          title: "เข้าสู่ระบบ",
+          to: "/SignIn"
+        },
+        {
+          icon: "mdi-chart-bubble",
+          title: "ลงทะเบียน",
+          to: "/SingUp"
         }
+
+
       ]
-    }
+    };
   },
   computed: {
     drawer: {
       get() {
-        return this.$store.state.drawer
+        return this.$store.state.drawer;
       },
       set(newVal) {
-        this.$store.commit('set_drawer', newVal)
+        this.$store.commit("set_drawer", newVal);
       }
     }
   }
-}
+};
 </script>
 
 <style lang="css" scoped></style>

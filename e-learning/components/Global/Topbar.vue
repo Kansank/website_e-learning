@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-app-bar fixed app dark>
+  <v-app-bar fixed app >
     <v-app-bar-nav-icon @click.stop="toggleDrawer" />
     <v-toolbar-title v-text="title" />
   </v-app-bar>
