@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container fluid>
+   <!--  <v-container fluid>
       <v-row align="center">
         <v-col cols="12" sm="2">
           <v-subheader v-text="'หมวดหมู่คอร์สเรียน'"></v-subheader>
@@ -51,7 +51,7 @@
         </v-col>
       </v-row>
     </v-container>
-
+ -->
     <v-divider></v-divider>
 
 
@@ -61,24 +61,35 @@
       v-for="course of courses.courses"
       :key="course.id"
       class="mr-auto ml-auto"
-      max-width="250"
+      max-width="344"
+      height="100%"
     >
       <v-img
-        :src="require(course.image)"
-        height="200px"
+        :src="course.image"
+      
+       
       ></v-img>
 
       <v-card-title>
         {{ course.name }}
       </v-card-title>
+      
 
       <v-card-subtitle>
-        1,000 miles of wonder
+        author: {{ course.author  }}
+
+        
       </v-card-subtitle>
 
-      <v-card-actions>
-        <v-btn color="orange lighten-2" >
-          ขายดี
+     
+      <div class="ml-4" >
+           <strong>THB{{ course.price  }}</strong>  
+      </div>
+            
+
+      <v-card-actions fix>
+        <v-btn depressed color="primary">
+         Read more
         </v-btn>
 
         <v-spacer></v-spacer>
